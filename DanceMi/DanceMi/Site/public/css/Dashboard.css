@@ -20,7 +20,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(58, 58, 58);
+    background-color: rgb(245, 244, 244);
     /* color of the scroll thumb */
     border-radius: 20px;
     /* roundness of the scroll thumb */
@@ -40,16 +40,15 @@ main h1 {
     margin-top: 25px;
     margin-left: 25px;
     font-size: 3rem;
-    color: #110000;
+    color: #d41e1e;
 }
 
 body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), linear-gradient(180deg, #DFDADA 0%, rgba(91, 84, 84, 0) 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: rgb(251, 250, 252);
 }
 
 .header {
-    background-color: #110000;
+    background-color: #3c096c;
     padding: 10px 10px;
     display: flex;
     justify-content: space-between;
@@ -136,15 +135,14 @@ main {
 
 main h1 {
     padding: 50px 0 0 73px;
-    color: #110000;
+    color: #108366;
 }
 
 .menu {
-    background-image: linear-gradient(#784C61, #372116, #420422);
+    background-image: linear-gradient(#9d4edd, #5a189a, #240046);
     width: 6%;
     height: 225vh;
 }
-
 
 
 .Alinhamento-1 {
@@ -159,8 +157,8 @@ main h1 {
     width: 251px;
     height: 251px;
 
-    background: #F1F1F1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #240046;
+    box-shadow: 0px 4px 4px rgba(187, 92, 241, 0.25);
 }
 
 
@@ -168,29 +166,22 @@ main h1 {
     width: 251px;
     height: 251px;
 
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #420422;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #7b2cbf;
+    box-shadow: 0px 4px 4px rgba(187, 92, 241, 0.25);
 }
 
 
+.caixa3 {
+    width: 251px;
+    height: 251px;
 
-
-
-.numerob {
-
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 32px;
-    color: #420422;
-    text-transform: uppercase;
-    display: flex;
-    margin-top: 5vh;
-    justify-content: center;
+    background: #c77dff;
+    box-shadow: 0px 4px 4px rgba(187, 92, 241, 0.25);
 }
 
-.numerov {
+
+.numeroc {
+
     font-family: 'Lato';
     font-style: normal;
     font-weight: 900;
@@ -200,11 +191,38 @@ main h1 {
     text-transform: uppercase;
     display: flex;
     margin-top: 5vh;
-    justify-content: center;
+    text-align: center;
+}
+
+.numerob {
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 32px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.numerok {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 32px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    margin-top: 5vh;
+    text-align: center;
 
 }
 
-.campo_branco {
+.campo_classico {
     height: 84px;
 
     font-family: 'Chivo';
@@ -215,11 +233,26 @@ main h1 {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #000000;
+    color: white;
 
 }
 
-.campo_vinho {
+.campo_breakdance {
+    height: 84px;
+
+    font-family: 'Chivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+}
+
+.campo_kpop {
     height: 84px;
 
     font-family: 'Chivo';
@@ -266,151 +299,8 @@ main h1 {
 }
 
 
-
-.seta {
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-    margin-top: -8vh;
-    margin-right: 4vh;
-
-}
-
-.container-retangulo1 {
-    width: 1160px;
-    height: 81px;
-    margin-top: 7vh;
-    background: #F1F1F1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.Alinhamento-2 {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 13vh;
-    gap: 46px;
-
-
-}
-
-
-.caixag {
-    width: 565px;
-    height: 251px;
-
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #420422;
-    box-shadow: 0px 15px #42CD2D;
-}
-
-.campo_vinhog {
-    display: flex;
-    justify-content: center;
-    margin-top: 6vh;
-}
-
-.numerog {
-    display: flex;
-    justify-content: center;
-    margin: 8vh;
-    font-family: 'Lato';
-    font-weight: 1000;
-    font-size: 29px;
-}
-
-.metricas {
-    display: flex;
-    justify-content: center;
-
-}
-
-.caixa-metricas-centralizar {
-    display: flex;
-    justify-content: center;
-
-}
-
-.texto-metrica, .numero-alerta {
-    font-family: 'Lato';
-    display: flex;
-    font-weight: 1000;
-    justify-content: center;
-    margin-top: 5vh;
-
-}
-
-.numero-alerta {
-    display: flex;
-    justify-content: center;
-}
-
-
-.alinhamento-metricas {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 6vh;
-
-}
-
-.perigo {
-    width: 205px;
-    height: 198px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(180deg, rgba(21, 19, 32, 0.57) 0%, #295B89 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.alerta {
-    width: 205px;
-    height: 198px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(180deg, #387E7A 0%, #427972 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.ideal {
-    width: 205px;
-    height: 198px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(180deg, #3FD127 0%, #58AC57 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.alerta-quente {
-    width: 205px;
-    height: 198px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(180deg, #F9E533 0%, #D2BD4B 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.perigo-quente {
-    width: 205px;
-    height: 198px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(180deg, #DA0909 0%, #E36239 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
-}
-
-
-
-
-
-
-
-
-
 footer {
-    background-color: #110000;
+    background-color: #3c096c;
     text-align: center;
     bottom: 0;
     position: fixed;
