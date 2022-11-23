@@ -21,7 +21,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #800080;
+    background-color: #ffffff;
     /* cor da  scroll thumb */
     border-radius: 20px;
     /* roundness of the scroll thumb */
@@ -97,7 +97,7 @@ body {
 
     background-color: black;
 
-    background-image: url("../assets/img-login.jpg!d");
+    background-image: url("../assets/danceCentral.png");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
@@ -327,18 +327,18 @@ body {
 
 .links li {
     margin-top: 6px;
-    margin-right: 400px;
+    margin-right: 50px;
 }
 
 .links a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 20px;
 }
 
 .links ul {
-    width: max-content;
-    list-style: none;
+    width: auto;
+    list-style:none;
 }
 
 .media img {

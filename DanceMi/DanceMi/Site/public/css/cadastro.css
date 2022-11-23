@@ -30,13 +30,14 @@ body::-webkit-scrollbar-thumb {
 
 
 .background {
-    background-image: url("../assets/img-cadastro.jpeg");
-    background-size: cover;
+    background-image: url("../assets/justdanceCadastro.jpeg");
+    background-size: contain;
     background-repeat: no-repeat;
     padding: 0;
     height: 100%;
 
 }
+
 
 .container {
     margin: 0 auto;
@@ -324,18 +325,18 @@ a {
 
 .links li {
     margin-top: 6px;
-    margin-right: 400px;
+    margin-right: 50px;
 }
 
 .links a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 20px;
 }
 
 .links ul {
-    width: max-content;
-    list-style: none;
+    width: auto;
+    list-style:none;
 }
 
 .media img {
