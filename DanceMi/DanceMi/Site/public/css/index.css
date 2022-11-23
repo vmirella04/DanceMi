@@ -10,24 +10,17 @@
 }
 
 body::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
     /* width of the entire scrollbar */
 }
 
-body::-webkit-scrollbar-track {
-    background-color: rgb(0, 0, 0);
-}
-
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255);
+    background-color: #3C096C;
     /* color of the scroll thumb */
     border-radius: 20px;
     /* roundness of the scroll thumb */
     /* creates padding around scroll thumb */
 }
-
-
-
 
 .background {
     color: #000000;
@@ -37,17 +30,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header {
-    background-color: black;
+    background-color: #10002B;
     padding: 10px 10px;
-}
-
-.header img {
-    transition: all 0.8s;
-}
-
-.header img:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.2);
 }
 
 .container {
@@ -59,8 +43,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container img {
-    width: 170px;
-    height: 70px;
+    height: 52.5px;
+    width: 206px;
 }
 
 .textos {
@@ -84,7 +68,8 @@ body::-webkit-scrollbar-thumb {
     content: " ";
     width: 0%;
     height: 2px;
-    background-color: white;
+    background-color: #E0AAFF;
+    /*background: linear-gradient(90deg, rgba(224,170,255,1) 0%, rgba(123,44,191,1) 51%, rgba(224,170,255,1) 100%);*/
     position: absolute;
     bottom: -3px;
     left: 0px;
@@ -222,12 +207,17 @@ a {
 
 .footer {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(101, 16, 180, 0.5), rgb(0, 0, 0)), url("../assets/Imagem\ 4.jpg");
+    height: auto;
+    background: #10002B;
     background-size: cover;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+/*as medidas estão na metade*/
+.footer img {
+    height: 52.5px;
+    width: 206px;
 }
 
 .footer p {
@@ -242,10 +232,6 @@ a {
     justify-content: space-evenly;
     margin: auto;
 
-}
-
-.footer .container #loguinho {
-    margin-right: 100px;
 }
 
 /*--LINKS--*/
@@ -264,7 +250,7 @@ a {
 
 .links li {
     margin-top: 6px;
-    margin-right: 400px;
+    margin-right: 50px;
 }
 
 .links a {
@@ -274,15 +260,18 @@ a {
 }
 
 .links ul {
-    width: max-content;
-    list-style: none;
+    width: auto;
+    list-style:none;
 }
+ .media{
+    margin-left: 50px;
+ }
 
 .media img {
     margin-top:7px ;
     height: 30px;
     width: 30px;
-    margin-left: 12px;
+    margin-left: 15px;
     cursor: pointer;
 }
 
