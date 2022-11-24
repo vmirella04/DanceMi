@@ -284,14 +284,27 @@ a {
 }
 
 .gallery {
+    align-items: center;
 	padding: 5px;
-	display:grid;
+    display: flex;
+	/*display:grid;
 	grid-template-columns: repeat(20, 20%);
 	grid-template-rows: 5px;
 	grid-column-gap: 5px;
-	grid-row-gap: 5px;
-	height: 430px;
+	grid-row-gap: 5px;*/
+	height: 440px;
     overflow:scroll;
+}
+
+.gallery::-webkit-scrollbar {
+    
+    width: 5px;
+    /* width of the entire scrollbar */
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background-color: #3C096C;
+    border-radius: 20px;
 }
 
 li {
