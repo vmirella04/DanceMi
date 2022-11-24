@@ -7,12 +7,12 @@ nome varchar(45),
 descricao varchar(150)
 );
 
-insert into Danca values 
-(null, 'Just Dance', 'JJogo eletrônico de música, onde o usuário tem que imitar os movimentos dos personagens'),
+insert into Jogo values 
+(null, 'Just Dance', 'Jogo eletrônico de música, onde o usuário tem que imitar os movimentos dos personagens'),
 (null, 'Dance Central', 'Jogo de ritmo de músicas para o Xbox 360, que captura seus movimentos pelo Kinect.');
 
 create table Usuario (
-idUsuario int primary key,
+idUsuario int primary key auto_increment,
 nome varchar(45),
 telCel char (11),
 email varchar(100)
@@ -25,39 +25,27 @@ foreign key (fkJogo) references Jogo (idJogo)
 insert into Usuario values 
 (null, 'Teste Silva', '1197290465', 'teste.silva@gmail.com', '1234', 2);
 
-create table Nickname (
-idNickname int primary key auto_increment,
-nickname varchar(45),
-fkUsuario int,
-foreign key (fkUsuario) references Usuario (idUsuario)
+create table Imagem (
+idImg int auto_increment,
+link varchar(100),
+fkJogo int,
+foreign key (fkJogo) references Jogo (idJogo),
+primary key (idImg, fkJogo)
 ) auto_increment = 1000;
 
-insert into Nickname values 
-(null, 'testenick', 1);
-
-create table Metrica (
-idMetrica int auto_increment,
-sel_usuario varchar (45),
-fkUsuario int,
-foreign key (fkUsuario) references Usuario(idUsuario),
-primary key (idMetrica, fkUsuario)
-);
+insert into Imagem values 
+(null, "./assets/imgjustdance.jpeg", 1);
 
 -- Exibir todos os dados de todas as tabelas separadamente
 select * from Usuario;
 select * from Jogo;
-select * from Nickname;
-select * from Metrica;
+select * from Imagem;
 
 -- Exibir todos os dados das tabelas Usuario e Jogo em conjunto
 select U.*, J.* from Usuario as U join Jogo as J on U.fkJogo = J.idJogo; 
 
--- Exibir Nome, Nickname e Jogo escolhido dos usuarios
-select U.nome, N.nickname, J.nome from Usuario as U join Nickname as N 
-on N.fkUsuario = U.idUsuario join Jogo as J on U.fkJogo = J.idJogo; 
-
 -- Exibir o número de usuários que preferem Just Dance
-select count(nome) from Usuario where fkJogo = 1
+select count(nome) from Usuario where fkJogo = 1;
 
 -- Exibir o número de usuários que preferem Dance Central
-select count(nome) from Usuario where fkJogo = 2
+select count(nome) from Usuario where fkJogo = 2;
