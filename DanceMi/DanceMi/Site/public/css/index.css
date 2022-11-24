@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&family=Montserrat:wght@400;600&family=Sarala:wght@400;700&display=swap');
 
+@font-face 
+{ 
+font-family: "Prisma";  
+src: url("../font/Prisma.ttf"); 
+}
 * {
     padding: 0;
     margin: 0;
@@ -7,8 +12,13 @@
     font-family: 'Chivo', sans-serif;
     font-weight: 300;
     box-sizing: border-box;
+    background-color: #10002B;
 }
 
+body{
+    width: 100%;
+    height: 1000000px;
+}
 body::-webkit-scrollbar {
     width: 5px;
     /* width of the entire scrollbar */
@@ -47,6 +57,18 @@ body::-webkit-scrollbar-thumb {
     width: 206px;
 }
 
+.slide{
+    width: 80%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.slides{
+    width: 150px;
+    height: 300px;
+}
 .textos {
     display: flex;
     flex-direction: row;
@@ -101,66 +123,29 @@ a {
 
 }
 
-.divisao {
-    width: 100%;
-    height: 9px;
-    background: black;
-    }
-
-.carrosel p {
-    padding-left: 40px;
-    color: #FFFFFF;
-    font-size: 55px;
-    font-weight: 300;
+.vid {
+    width: 60%;
+    height: 500px;
+    margin: 25px;
 }
 
-/* --CAMPO VALORES--*/
-
-.values {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 15px;
-    background-color: black;
-}
-
-.caixaformulario {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 40px;
-}
-
-.campo {
-    width: 20.00vw;
-    min-height: max-content;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(95, 18, 158, 0.39);
-    padding: 8px 10px;
-    display: flex;
+.dancecentral{
+    margin-top: 5%;
+    width: 500px;
+    float: right;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
-.campo img {
-    width: 145px;
-    height: 145px;
-}
-
-.campo h4 {
-    padding-top: 13px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    color: purple;
-}
-
-.campo p {
-    justify-content: center;
-    padding: 12px 8px;
-    font-size: 16px;
+.dancecentral p{
     text-align: center;
-    color: #000000;
+    margin: 25px;
+    margin-right: 50px;
+    font-size: 22px;
+}
 
+.dancecentral img{
+    width: 300px;
+    margin-left: 80px;;
 }
 
 .social {
@@ -286,4 +271,29 @@ a {
 .copyright {
     margin: auto;
     text-align: center;
+}
+
+.cards{
+    height: 550px;
+    margin: 15px;
+}
+.title{
+    font-size: 50px;
+    text-align: center;
+    font-family: Prisma;
+}
+
+.gallery {
+	padding: 5px;
+	display:grid;
+	grid-template-columns: repeat(20, 20%);
+	grid-template-rows: 5px;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	height: 430px;
+    overflow:scroll;
+}
+
+li {
+	display: inline-block;
 }
