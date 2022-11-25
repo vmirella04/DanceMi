@@ -15,69 +15,45 @@ src: url("../font/Prisma.ttf");
     background-color: #10002B;
 }
 
-body{
-    width: 100%;
-    height: 1000000px;
-}
 body::-webkit-scrollbar {
     width: 5px;
-    /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #3C096C;
-    /* color of the scroll thumb */
     border-radius: 20px;
-    /* roundness of the scroll thumb */
-    /* creates padding around scroll thumb */
 }
-
-.background {
-    color: #000000;
+.navbar{
+    color: #10002B;
     width: 100%;
-    height: 100vh;
-    background-size: cover;
-}
-
-.header {
-    background-color: #10002B;
+    height: auto;
     padding: 10px 10px;
-}
-
-.container {
     margin: 0 auto;
-    width: 92%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 300;
 }
 
-.container img {
+.navbar img {
     height: 52.5px;
     width: 206px;
 }
 
-.slide{
-    width: 80%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: all 0.4s;
-}
-
-.slides{
-    width: 150px;
-    height: 300px;
-}
-.textos {
+.navbar ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 600px;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 
-.textos li {
+.navbar li {
     display: flex;
     margin: 2px 15px;
     color: #FFFFFF;
@@ -86,21 +62,19 @@ body::-webkit-scrollbar-thumb {
     position: relative;
 }
 
-.textos li::after {
+.navbar li::after {
     content: " ";
     width: 0%;
-    height: 2px;
+    height: 4px;
     background-color: #E0AAFF;
-    /*background: linear-gradient(90deg, rgba(224,170,255,1) 0%, rgba(123,44,191,1) 51%, rgba(224,170,255,1) 100%);*/
     position: absolute;
     bottom: -3px;
     left: 0px;
     transition: 0.5s;
     border-radius: 2px;
-
 }
 
-.textos li:hover::after {
+.navbar li:hover::after {
     width: 100%;
 }
 
@@ -110,17 +84,37 @@ a {
     font-size: larger;
 }
 
-/* --BANNER--*/
+.navbar ul li{
+    display: inline-block;
+}
 
-.banner {
+.navbar ul ul li{
+    float: none;
+    display: list-item;
+    position: relative;
+    width: 150px;
+    margin: 0;
+    margin-top: 5px;
+}
 
-    display: flex;
-    height: 85%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
+.navbar ul ul{
+    display: none;
+    position: absolute;
+    top: 30px;
+}
+.navbar ul li:hover > ul{
+    display: inherit;
+}
 
+.navbar ul ul ul li{
+    position: relative;
+    left: 140px;
+}
+
+.navbar a{
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .vid {
@@ -273,40 +267,71 @@ a {
     text-align: center;
 }
 
-.cards{
-    height: 550px;
-    margin: 15px;
-}
 .title{
     font-size: 50px;
     text-align: center;
     font-family: Prisma;
 }
-
+.equipes{
+    height: 400px;
+}
 .gallery {
     align-items: center;
-	padding: 5px;
-    display: flex;
-	/*display:grid;
-	grid-template-columns: repeat(20, 20%);
-	grid-template-rows: 5px;
-	grid-column-gap: 5px;
-	grid-row-gap: 5px;*/
-	height: 440px;
-    overflow:scroll;
+    margin-top: 50px;
+    height: 50px;
+    margin-left: 210px;
+}
+.card {
+    height: 220px;
+    width: 150px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    transition: 0.5s all ease-in-out;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.name{
+    display:none;
 }
 
-.gallery::-webkit-scrollbar {
-    
-    width: 5px;
-    /* width of the entire scrollbar */
+.card:hover {
+    transform: scale(1.2);
+    width: 200px;
 }
 
-.gallery::-webkit-scrollbar-thumb {
-    background-color: #3C096C;
-    border-radius: 20px;
+.card#flash{
+    background-image: url(../assets/banners/flash.png);
+}
+.card#flash:hover{
+    background-image: url(../assets/banners/flashplayers.png);
 }
 
-li {
-	display: inline-block;
+.card#glitter{
+    background-image: url(../assets/banners/gliterrati.png);
+}
+.card#glitter:hover{
+    background-image: url(../assets/banners/gliterratiplayers.png);
+}
+
+.card#HD{
+    background-image: url(../assets/banners/Hi\ def.png);
+}
+.card#HD:hover{
+    background-image: url(../assets/banners/hidefplayers.png);
+}
+
+.card#lush{
+    background-image: url(../assets/banners/lush.jfif);
+}
+.card#lush:hover{
+    background-image: url(../assets/banners/lushplayers.png);
+}
+
+.card#ripitide{
+    background-image: url(../assets/banners/repitide.png);
+}
+.card#ripitide:hover{
+    background-image: url(../assets/banners/repitideplayers.png);
 }

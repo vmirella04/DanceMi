@@ -13,48 +13,79 @@
 </head>
 
 <body>
-    <div class="background">
-        <div class="header">
-            <div class="container">
-                <img src="./assets/logo.png" alt="">
-                <div class="navbar">
-                    <ul class="textos">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sobremim.html">Sobre Mim</a></li>
-                        <li><a href="login.html">Entrar</a></li>
-                        <li><a href="cadastro.html">Cadastre-se</a></li>
-                    </ul>
+    <nav class="navbar">
+        <img src="./assets/logo.png" alt="">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a>Jogos</a>
+                <ul>
+                    <li><a>Dance Central
+                        <ul>
+                            <li><a>Equipes</a></li>
+                            <li><a>Modos de jogo</a></li>
+                            <li><a>Gameplay</a></li>
+                            <li><a>Plataformas</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Just Dance</a>
+                        <ul>
+                            <li><a>Modos de jogo</a></li>
+                            <li><a>Gameplay</a></li>
+                            <li><a>Plataformas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="sobremim.html">Sobre Mim</a></li>
+            <li><a href="login.html">Entrar</a></li>
+            <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+    </nav>
+    </div>
+    <div>
+        <video class="vid" autoplay="true" muted loop controls>
+            <source src="./assets/Dance Central vid.mp4" type="video/mp4">
+        </video>
+        <div class="dancecentral">
+            <img src="./assets/DC logo.png" alt="Dance Central Logo">
+            <p>
+                Dance Central é uma franquia de jogos de dança desenvolvido pela Harmonix, criadores do Guitar Hero e do
+                Rock Band. O jogo conta com diversos modos e uma extensa variedade de músicas para todos os estilos e
+                também equipes de dança diferentes para se escolher.
+            </p>
+        </div>
+        <div class="equipes">
+            <h1 class="title">Equipes</h1>
+            <div class="gallery">
+                <div id="flash" class="card">
+                    <img src="" alt="">
+                </div>
+                <div id="glitter" class="card">
+                    <img src="" alt="">
+                </div>
+                <div id="HD" class="card">
+                    <img src="" alt="">
+                </div>
+                <div id="lush" class="card">
+                    <img src="" alt="">
+                </div>
+                <div id="ripitide" class="card">
+                    <img src="" alt="">
                 </div>
             </div>
         </div>
+        <video id="justdance" class="vid" autoplay="true" muted loop controls>
+            <source src="./assets/justdance vid.mp4" type="video/mp4">
+        </video>
         <div>
-            <video class="vid"  autoplay="true" muted loop controls>
-                <source src="./assets/Dance Central vid.mp4" type="video/mp4">
-            </video>
-            <div class="dancecentral">
-                <img src="./assets/DC logo.png" alt="Dance Central Logo">
-                <p>
-                    Dance Central é uma franquia de jogos de dança desenvolvido pela Harmonix, criadores do Guitar Hero e do Rock Band. O jogo conta com diversos modos e uma extensa variedade de músicas para todos os estilos e também equipes de dança diferentes para se escolher.
-                </p> 
-            </div>
-            <div>
-                <h1 class="title">Equipes</h1>
-                <ul class="gallery">
-                    <li><img src="./assets/banners/DCI.png" alt=""></li>
-                    <li><img src="./assets/banners/dcoy.png" alt=""></li>
-                    <li><img src="./assets/banners/flash.png" alt=""></li>
-                    <li><img src="./assets/banners/gliterrati.png" alt=""></li>
-                    <li><img src="./assets/banners/Hi def.png" alt=""></li>
-                    <li><img src="./assets/banners/lush.jfif" alt=""></li>
-                    <li><img src="./assets/banners/MOC.png" alt=""></li>
-                    <li><img src="./assets/banners/repitide.png" alt=""></li>
-                </ul>
-            </div>    
-        </div>
-        <div class="copyright">
-            <p>Copyright &copy; 2022 DanceMi - Todos os direitos reservados - Desenvolvido por DanceMi Enterprise
-            </p>
+
         </div>
     </div>
+    <div class="copyright">
+        <p>Copyright &copy; 2022 DanceMi - Todos os direitos reservados - Desenvolvido por DanceMi Enterprise
+        </p>
+    </div>
+    </div>
 </body>
+
 </html>
