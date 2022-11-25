@@ -31,7 +31,7 @@ body::-webkit-scrollbar-thumb {
 
 .background {
     background-image: url("../assets/justdanceCadastro.jpeg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
     height: 100%;
@@ -107,7 +107,7 @@ a {
 
 .caixa-formulario {
     /* opacity: 70%; */
-    background-color: rgba(255, 255, 255, 0.753);
+    background-color: rgba(255, 255, 255, 0.884);
     margin-top: 50px;
     padding: 0px 45px;
     height: 660px;
