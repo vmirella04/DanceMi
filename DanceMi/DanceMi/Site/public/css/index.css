@@ -118,7 +118,7 @@ a {
 }
 
 .vid {
-    width: 60%;
+    width: 50%;
     height: 500px;
     margin: 25px;
 }
@@ -273,7 +273,7 @@ a {
     font-family: Prisma;
 }
 .equipes{
-    height: 400px;
+    height: 80vh;
 }
 .gallery {
     align-items: center;
