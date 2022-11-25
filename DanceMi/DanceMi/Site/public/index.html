@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="Logo icon" href="../assets/garrafa-de-vinho.png">
+    <link rel="Logo icon" href="./assets/disco ball.gif">
     <link rel="stylesheet" href="style.css" />
     <script src="./js/funcoes.js"></script>
     <title>DanceMi</title>
@@ -20,15 +20,16 @@
             <li><a href="./jogos.html">Jogos</a>
                 <ul>
                     <li><a>Dance Central
-                        <ul>
-                            <li><a>Equipes</a></li>
-                            <li><a>Modos de jogo</a></li>
-                            <li><a>Gameplay</a></li>
-                            <li><a>Plataformas</a></li>
-                        </ul>
+                            <ul>
+                                <li><a>Equipes</a></li>
+                                <li><a>Modos de jogo</a></li>
+                                <li><a>Gameplay</a></li>
+                                <li><a>Plataformas</a></li>
+                            </ul>
                     </li>
                     <li><a>Just Dance</a>
                         <ul>
+                            <li><a href="">Just Dance 2023</a></li>
                             <li><a>Modos de jogo</a></li>
                             <li><a>Gameplay</a></li>
                             <li><a>Plataformas</a></li>
@@ -41,9 +42,8 @@
             <li><a href="cadastro.html">Cadastre-se</a></li>
         </ul>
     </nav>
-    </div>
-    <div>
-        <video class="vid" autoplay="true" muted loop controls>
+    <div id="divdc">
+        <video class="vidDC" autoplay="true" muted loop controls>
             <source src="./assets/Dance Central vid.mp4" type="video/mp4">
         </video>
         <div class="dancecentral">
@@ -53,46 +53,54 @@
                 Rock Band. O jogo conta com diversos modos e uma extensa variedade de músicas para todos os estilos e
                 também equipes de dança diferentes para se escolher.
             </p>
-            <a class="redtexto" href="">Dance Central</a>
+            <a class="redtexto" href="./jogos.html#DanceCentral">saiba mais</a>
         </div>
-        <div class="equipes" style="height: 650px;">
-            <h1 class="title">Equipes</h1>
-            <div class="gallery">
-                <div id="flash" class="card">
-                    <img src="" alt="">
-                </div>
-                <div id="glitter" class="card">
-                    <img src="" alt="">
-                </div>
-                <div id="HD" class="card">
-                    <img src="" alt="">
-                </div>
-                <div id="lush" class="card">
-                    <img src="" alt="">
-                </div>
-                <div id="ripitide" class="card">
-                    <img src="" alt="">
-                </div>
-            </div>
-        </div>
-     <div class="vid2" style="margin-top: -200px;">   
-        <video id="justdance" style="height: 500px; width: 50%; margin: 25px;" autoplay="true" muted loop controls>
-            <source src="./assets/justdance vid.mp4" type="video/mp4">
-        </video>
+    </div>
+
+    <div class="divisao">
+        <span class="txt">VS</span>
+    </div>
+
+    <div id="divJD">
         <div class="justdance">
             <img src="./assets/JSlogo.jpg" alt="Just Dance Logo">
             <p>
-                Dance Central é uma franquia de jogos de dança desenvolvido pela Harmonix, criadores do Guitar Hero e do
-                Rock Band. O jogo conta com diversos modos e uma extensa variedade de músicas para todos os estilos e
-                também equipes de dança diferentes para se escolher.
+                Just Dance foi lançado em 2014 e desde lá todos os anos é laçado um novo jogo com uma seleção de músicas
+                mais populares e mais tocadas do ano. Desenvolvido pela Ubsoft conta com uma experiencia única desde a
+                criação das danças até seus variados modos, hoje são nove jogos e o inovador Just Dance Now.
             </p>
+            <a class="redtexto" href="./jogos.html#DanceCentral">saiba mais</a>
         </div>
-     </div>
+        <video class="vidJD" autoplay="true" muted loop controls>
+            <source src="./assets/justdance vid.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <img src="./assets/logo.png" alt="" id="loguinho">
+            <div class="links">
+                <ul>Navegação
+                    <li><a href="jogos.html">Jogos</a></li>
+                    <li><a href="sobremim.html">Sobre Mim</a></li>
+                    <li><a href="login.html">Entrar</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </div>
+            <div class="media">
+                <div id="redes">
+                    <h4>REDES SOCIAIS</h4>
+                    <img src="./assets/instagramWhite.png" alt="">
+                    <img src="./assets/facebookWhite.png" alt="">
+                    <img src="./assets/whatsappWhite.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
     <div class="copyright">
-        <p>Copyright &copy; 2022 DanceMi - Todos os direitos reservados - Desenvolvido por DanceMi Enterprise
+        <p>
+            Copyright &copy; 2022 DanceMi - Todos os direitos reservados - Desenvolvido por DanceMi Enterprise
         </p>
-    </div>
     </div>
 </body>
 

@@ -118,7 +118,7 @@ body {
 }
 
 #login h2 {
-    color:white (0, 0, 0);
+    color: white (0, 0, 0);
     text-align: center;
     margin: auto;
     padding: auto;
@@ -200,38 +200,38 @@ body {
 
 }
 
-.alerta_erro{
+.alerta_erro {
     display: flex;
     justify-content: flex-end;
-  }
-  
-  .card_erro {
+}
+
+.card_erro {
     display: none;
     background-color: black;
     color: white;
     width: 230px;
     position: fixed;
     border-radius: 4px;
-    border:  #800080 3px solid;
+    border: #800080 3px solid;
     padding: 10px;
     margin-right: 10%;
-  }
-  
-  .card_erro #mensagem_erro{
+}
+
+.card_erro #mensagem_erro {
     font-weight: 500;
     font-size: 20px;
-  }
+}
 
-  .loading-div {
+.loading-div {
     width: 50px;
     margin: auto;
     display: none;
-  }
-  
-  .loading-div img {
+}
+
+.loading-div img {
     height: 50px;
     width: 50px;
-  }
+}
 
 .card-footer {
 
@@ -239,26 +239,26 @@ body {
 
     flex-direction: column;
 
-    
+
 }
 
 .card-footer .submit {
     border-radius: 5px;
-    
+
     align-items: center;
-    
+
     width: 100%;
-    
+
     height: 40px;
-    
+
     background-color: #800080;
-    
+
     border: none;
-    
+
     color: white;
-    
+
     margin: 20px 0;
-    
+
     cursor: pointer;
 }
 
@@ -290,7 +290,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-top:  3px solid purple;
+    border-top: 3px solid purple;
 }
 
 .footer p {
@@ -338,11 +338,11 @@ body {
 
 .links ul {
     width: auto;
-    list-style:none;
+    list-style: none;
 }
 
 .media img {
-    margin-top:7px ;
+    margin-top: 7px;
     height: 30px;
     width: 30px;
     margin-left: 12px;

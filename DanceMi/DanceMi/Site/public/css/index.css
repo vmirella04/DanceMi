@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&family=Montserrat:wght@400;600&family=Sarala:wght@400;700&display=swap');
 
-@font-face 
-{ 
-font-family: "Prisma";  
-src: url("../font/Prisma.ttf"); 
+@font-face {
+    font-family: "Prisma";
+    src: url("../font/Prisma.ttf");
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -12,19 +12,22 @@ src: url("../font/Prisma.ttf");
     font-family: 'Chivo', sans-serif;
     font-weight: 300;
     box-sizing: border-box;
-    background-color: #10002B;
+    HNVJNM
 }
 
 body::-webkit-scrollbar {
     width: 5px;
+    background: linear-gradient(180deg, #10002b 0%, 50%, #3db7ed 100%);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #3C096C;
+    background-color: #FFFFFF;
     border-radius: 20px;
 }
-.navbar{
-    color: #10002B;
+
+/* Header */
+.navbar {
+    background-color: #10002B;
     width: 100%;
     height: auto;
     padding: 10px 10px;
@@ -51,11 +54,12 @@ body::-webkit-scrollbar-thumb {
     padding: 0px;
     margin: 0px;
     position: relative;
+    background-color: #10002B;
 }
 
 .navbar li {
     display: flex;
-    margin: 2px 15px;
+    margin: 5px 15px;
     color: #FFFFFF;
     align-items: center;
     transition: 0.6s;
@@ -71,7 +75,7 @@ body::-webkit-scrollbar-thumb {
     bottom: -3px;
     left: 0px;
     transition: 0.5s;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .navbar li:hover::after {
@@ -82,15 +86,16 @@ a {
     color: white;
     text-decoration: none;
     font-size: larger;
+    background-color: #10002B;
 }
 
-.navbar ul li{
+.navbar ul li {
     float: left;
     display: inline-block;
     text-align: center;
 }
 
-.navbar ul ul li{
+.navbar ul ul li {
     float: none;
     display: list-item;
     position: relative;
@@ -99,19 +104,20 @@ a {
     margin-top: 8px;
 }
 
-.navbar ul ul{
+.navbar ul ul {
     display: none;
     position: absolute;
 }
 
-.navbar ul li:hover > ul{
+.navbar ul li:hover>ul {
     display: block;
 }
 
-.navbar ul ul li{
+.navbar ul ul li {
     position: relative;
 }
-.navbar ul ul ul{
+
+.navbar ul ul ul {
     margin-left: 138px;
     margin-top: -30px;
     padding: 0px;
@@ -119,252 +125,193 @@ a {
     height: auto;
 }
 
-.navbar ul ul ul li{
+.navbar ul ul ul li {
     position: relative;
     background-color: #E0AAFF;
     margin-top: 8px;
 }
 
-.navbar a{
+.navbar a {
     display: block;
     text-decoration: none;
     color: #FFFFFF;
 }
 
-.vid {
-    width: 50%;
+/*Dance central*/
+#divdc {
+    background-color: #10002B;
+}
+
+.vidDC {
     height: 500px;
     margin: 25px;
 }
 
-.dancecentral{
+.dancecentral {
     margin-top: 2%;
     width: 500px;
     float: right;
     align-items: center;
 }
 
-.dancecentral p{
+.dancecentral p {
     text-align: center;
     margin: 25px;
     margin-right: 50px;
-    font-size: 22px;
+    font-size: 25px;
 }
 
-.dancecentral img{
+.dancecentral img {
     width: 300px;
-    margin-left: 80px;;
+    margin-left: 80px;
+    ;
 }
 
 .dancecentral a {
-    margin-left: 35px;
+    margin-left: 85px;
     font-size: 50px;
 }
 
-.redtexto{
+.redtexto {
     background: #FFFFFF;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: Prisma;
     text-align: center;
+    font-size: 50px;
 }
 
-.redtexto:hover{
-    background: linear-gradient(45deg, rgba(224,170,255,1) 0%, rgb(235, 2, 146) 51%, rgba(224,170,255,1) 100%);;
-    -webkit-background-clip: text;
+.redtexto:hover {
+    text-shadow: 0 0 5px #FFFFFF, 0 0 10px #ff008c, 0 0 10px #26627c;
     -webkit-text-fill-color: transparent;
 }
 
-.social {
-    background-image: url("../assets/gif1.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 3px solid purple;
-}
-
-.social .container {
-    width: 90%;
-    padding: 30px 30px;
-}
-
-.social .container img {
-    height: 30%;
-    width: 30%;
-}
-
-.texto p {
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+/* Divisão */
+.divisao {
+    height: 75px;
+    background: linear-gradient(180deg, #10002b 0%, 50%, #26627c 100%);
     text-align: center;
-    font-size: 14;
+    padding: 0px;
+    margin: 0px;
 }
 
-.texto h2 {
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-top: 3px;
+.txt {
+    background: transparent;
+    color: #fffff;
+    font-size: 100px;
+    font-family: Prisma;
+    text-shadow: 0 0 5px #000000, 0 0 10px #ff008c, 0 0 10px #ff008c, 0 0 10px #ff008c
+}
+
+
+
+/* Just Dance */
+#divJD {
+    background-color: #26627c;
+}
+
+.vidJD {
+    height: 500px;
+    margin: 25px;
+    margin-top: 70px;
+}
+
+.justdance {
     text-align: center;
-    font-size: 50px;
-    font-weight: 500;
+    font-size: 25px;
+    margin-top: 50px;
+    padding: 25px;
+    width: 520px;
+    float: left;
+    align-items: center;
+}
+
+.justdance p {
+    text-align: center;
+    font-size: 25px;
+}
+
+.justdance img {
+    width: 300px;
 }
 
 /* --FOOTER--*/
 
 .footer {
-    width: 100%;
-    height: auto;
-    background: #10002B;
-    background-size: cover;
-    display: flex;
+    height: 200px;
+    background: linear-gradient(180deg, #26627c 0%, #10002b 100%);
     align-items: center;
-    flex-direction: column;
 }
+
 /*as medidas estão na metade*/
 .footer img {
+    float: left;
     height: 52.5px;
     width: 206px;
-}
-
-.footer p {
-    color: rgb(255, 255, 255);
-    padding-top: 17px;
-    font-size: 12px;
-}
-
-
-.footer .container {
-    padding: 15px 10px;
-    justify-content: space-evenly;
-    margin: auto;
-
+    margin: 25px;
+    margin-left: 100px;
 }
 
 /*--LINKS--*/
 
 .links {
-    display: flex;
-    flex-direction: row;
+    float: left;
+    margin-top: 25px;
+    margin-left: 250px;
 }
 
-.links h4 {
-    font-weight: 500;
-    font-size: 28px;
-    margin-bottom: 5px;
-    cursor: default;
+.links ul{
+    font-size: 20px;
 }
 
 .links li {
     margin-top: 6px;
     margin-right: 50px;
+    color: #FFFFFF;
+    font-size: 15px;
 }
 
 .links a {
-    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 20px;
+    background: transparent;
+}
+
+.links a:hover{
+    text-decoration: underline;
 }
 
 .links ul {
     width: auto;
-    list-style:none;
+    list-style: none;
 }
- .media{
-    margin-left: 50px;
- }
 
+/* redes sociais */
+.media {
+    float: right;
+    margin-top: 30px;
+    margin-right: 350px;
+}
+.media h4{
+
+}
 .media img {
-    margin-top:7px ;
+    align-items: center;
+    margin-top: 7px;
     height: 30px;
-    width: 30px;
     margin-left: 15px;
+    width: 30px;
     cursor: pointer;
 }
 
 .media h4 {
     text-align: center;
-    font-weight: 500;
     font-size: 20px;
-    margin-bottom: 5px;
     cursor: default;
 }
 
+/* direitos */
 .copyright {
+    background-color: #10002B;
     margin: auto;
     text-align: center;
-}
-
-.title{
-    font-size: 50px;
-    text-align: center;
-    font-family: Prisma;
-}
-.equipes{
-    height: 80vh;
-}
-.gallery {
-    align-items: center;
-    margin-top: 50px;
-    height: 50px;
-    margin-left: 210px;
-}
-.card {
-    height: 220px;
-    width: 150px;
-    margin-left: 50px;
-    margin-bottom: 25px;
-    transition: 0.5s all ease-in-out;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.name{
-    display:none;
-}
-
-.card:hover {
-    transform: scale(1.2);
-    width: 200px;
-}
-
-.card#flash{
-    background-image: url(../assets/banners/flash.png);
-}
-.card#flash:hover{
-    background-image: url(../assets/banners/flashplayers.png);
-}
-
-.card#glitter{
-    background-image: url(../assets/banners/gliterrati.png);
-}
-.card#glitter:hover{
-    background-image: url(../assets/banners/gliterratiplayers.png);
-}
-
-.card#HD{
-    background-image: url(../assets/banners/Hi\ def.png);
-}
-.card#HD:hover{
-    background-image: url(../assets/banners/hidefplayers.png);
-}
-
-.card#lush{
-    background-image: url(../assets/banners/lush.jfif);
-}
-.card#lush:hover{
-    background-image: url(../assets/banners/lushplayers.png);
-}
-
-.card#ripitide{
-    background-image: url(../assets/banners/repitide.png);
-}
-.card#ripitide:hover{
-    background-image: url(../assets/banners/repitideplayers.png);
 }
