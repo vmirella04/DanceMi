@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: auto;
     padding: 10px 10px;
-    margin: 0 auto;
+    margin: 0px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -48,8 +48,8 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     width: 600px;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     position: relative;
 }
 
@@ -85,30 +85,44 @@ a {
 }
 
 .navbar ul li{
+    float: left;
     display: inline-block;
+    text-align: center;
 }
 
 .navbar ul ul li{
     float: none;
     display: list-item;
     position: relative;
-    width: 150px;
-    margin: 0;
-    margin-top: 5px;
+    width: 140px;
+    margin: 0px;
+    margin-top: 8px;
 }
 
 .navbar ul ul{
     display: none;
     position: absolute;
-    top: 30px;
 }
+
 .navbar ul li:hover > ul{
-    display: inherit;
+    display: block;
+}
+
+.navbar ul ul li{
+    position: relative;
+}
+.navbar ul ul ul{
+    margin-left: 138px;
+    margin-top: -30px;
+    padding: 0px;
+    width: 150px;
+    height: auto;
 }
 
 .navbar ul ul ul li{
     position: relative;
-    left: 140px;
+    background-color: #E0AAFF;
+    margin-top: 8px;
 }
 
 .navbar a{
@@ -124,7 +138,7 @@ a {
 }
 
 .dancecentral{
-    margin-top: 5%;
+    margin-top: 2%;
     width: 500px;
     float: right;
     align-items: center;
@@ -140,6 +154,25 @@ a {
 .dancecentral img{
     width: 300px;
     margin-left: 80px;;
+}
+
+.dancecentral a {
+    margin-left: 35px;
+    font-size: 50px;
+}
+
+.redtexto{
+    background: #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Prisma;
+    text-align: center;
+}
+
+.redtexto:hover{
+    background: linear-gradient(45deg, rgba(224,170,255,1) 0%, rgb(235, 2, 146) 51%, rgba(224,170,255,1) 100%);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .social {
