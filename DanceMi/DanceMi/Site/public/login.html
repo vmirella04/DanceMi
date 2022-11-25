@@ -1,44 +1,51 @@
 <!DOCTYPE html>
-<link rel="Logo icon" href="./assets/garrafa-de-vinho.png">
+<link rel="Logo icon" href="./assets/disco ball.gif">
 <script src="./js/funcoes.js"></script>
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./css/login.css">
-
-    <!-- HEADER -->
-    <div class="background">
-        <div class="header">
-            <div class="container">
-                <img src="./assets/logo.png" alt="">
-                <div class="navbar">
-                    <ul class="textos">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sobremim.html">Sobre Mim</a></li>
-                        <li><a href="login.html">Entrar</a></li>
-                        <li><a href="cadastro.html">Cadastre-se</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <title>Login</title>
-
+    <title>Login</title>
 </head>
 
 <body>
+    <!-- HEADER -->
+    <nav class="navbar">
+        <img src="./assets/logo.png" alt="">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./jogos.html">Jogos</a>
+                <ul>
+                    <li><a>Dance Central
+                            <ul>
+                                <li><a>Equipes</a></li>
+                                <li><a>Modos de jogo</a></li>
+                                <li><a>Gameplay</a></li>
+                                <li><a>Plataformas</a></li>
+                            </ul>
+                    </li>
+                    <li><a>Just Dance</a>
+                        <ul>
+                            <li><a href="">Just Dance 2023</a></li>
+                            <li><a>Modos de jogo</a></li>
+                            <li><a>Gameplay</a></li>
+                            <li><a>Plataformas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="sobremim.html">Sobre Mim</a></li>
+            <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+    </nav>
 
     <div id="login">
 
         <form class="card">
-            
+
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
             </div>
@@ -90,31 +97,30 @@
 
     <div class="footer">
         <div class="container">
-            <img src="./assets/logo3.png" alt="" id="loguinho">
+            <img src="./assets/logo.png" alt="" id="loguinho">
             <div class="links">
-
-                <ul>
-                    <h4>Navegação</h4>
+                <ul>Navegação
+                    <li><a href="jogos.html">Jogos</a></li>
                     <li><a href="sobremim.html">Sobre Mim</a></li>
-                    <li><a href="cadastro.html">Cadastre-se</a></li>
                     <li><a href="login.html">Entrar</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
                 </ul>
-                
-                <div class="media">
-                    <div id="redes">
-                        <h4>REDES SOCIAIS</h4>
-                        <img src="./assets/instagramWhite.png" alt="">
-                        <img src="./assets/facebookWhite.png" alt="">
-                        <img src="./assets/whatsappWhite.png" alt="">
-                    </div>
+            </div>
+            <div class="media">
+                <div id="redes">
+                    <h4>REDES SOCIAIS</h4>
+                    <img src="./assets/instagramWhite.png" alt="">
+                    <img src="./assets/facebookWhite.png" alt="">
+                    <img src="./assets/whatsappWhite.png" alt="">
                 </div>
             </div>
-
         </div>
-        <div class="copyright">
-            <p>Copyright &copy; 2022 DanceMi - Todos os direitos reservados - Desenvolvido por DanceMi Enterprise
-            </p>
-        </div>
+    </div>
+    <div class="copyright">
+        <p>
+            Copyright &copy; 2022 DanceMi - Todos os direitos reservados - Desenvolvido por DanceMi Enterprise
+        </p>
+    </div>
     </div>
 
 </body>
@@ -132,11 +138,11 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-         finalizarAguardar();
+            finalizarAguardar();
             return false;
         }
         else {
-        setInterval(sumirMensagem, 5000)
+            setInterval(sumirMensagem, 5000)
         }
 
         console.log("FORM LOGIN: ", emailVar);
