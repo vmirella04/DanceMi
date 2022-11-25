@@ -25,21 +25,21 @@ foreign key (fkJogo) references Jogo (idJogo)
 insert into Usuario values 
 (null, 'Teste Silva', '1197290465', 'teste.silva@gmail.com', '1234', 2);
 
-create table Imagem (
-idImg int auto_increment,
-link varchar(100),
-fkJogo int,
-foreign key (fkJogo) references Jogo (idJogo),
-primary key (idImg, fkJogo)
+create table Avaliacao (
+idAvl int auto_increment,
+nota int,
+fkUsuario int,
+foreign key (fkUsuario) references Usuario (idUsuario),
+primary key (idAvl, fkUsuario)
 ) auto_increment = 1000;
 
-insert into Imagem values 
-(null, "./assets/imgjustdance.jpeg", 1);
+insert into Avaliacao values 
+(null, 5 , 1);
 
 -- Exibir todos os dados de todas as tabelas separadamente
 select * from Usuario;
 select * from Jogo;
-select * from Imagem;
+select * from Avaliacao;
 
 -- Exibir todos os dados das tabelas Usuario e Jogo em conjunto
 select U.*, J.* from Usuario as U join Jogo as J on U.fkJogo = J.idJogo; 
