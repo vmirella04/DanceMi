@@ -125,7 +125,13 @@ main {
     margin-top: -16vh;
 }
 
-/* NAVBAR */
+.Alinhamento-1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 9vh;
+
+}
 
 .menu {
     background-image: linear-gradient(#3c096c, #5a189a, #7b2cbf);
@@ -137,7 +143,6 @@ main {
     width: 251px;
     height: 251px;
     background: #240046;
-    box-shadow: 0px 4px 4px rgba(187, 92, 241, 0.25);
 }
 
 
@@ -145,7 +150,43 @@ main {
     width: 251px;
     height: 251px;
     background: #7b2cbf;
-    box-shadow: 0px 4px 4px rgba(187, 92, 241, 0.25);
+}
+
+.botao {
+    color: white;
+    display: flex;
+    margin-top: 5vh;
+    justify-content: center;
+}
+
+.campo1 {
+    height: 84px;
+    font-family: 'Chivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+
+}
+
+.campo2 {
+    height: 84px;
+    font-family: 'Chivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    flex-wrap: wrap;
+    padding: 10px;
+
 }
 
 /* FOOTER */
