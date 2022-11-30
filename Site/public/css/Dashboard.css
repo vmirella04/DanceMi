@@ -27,17 +27,10 @@ body::-webkit-scrollbar-thumb {
     /* creates padding around scroll thumb */
 }
 
-main {
-    margin: 0;
-    height: 80%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 body {
-    background: rgb(251, 250, 252);
+    background: rgb(2, 2, 2);
 }
 
 /* HEADER */
@@ -70,13 +63,23 @@ body {
     width: 10vh;
     justify-content: start;
     display: flex;
+    margin-left: 20%;
     align-items: center;
     max-height: 60px;
     max-width: 60px;
 }
 
+.header h1 {
+    width: 10vh;
+    justify-content: start;
+    display: flex;
+    margin-left: 25%;
+}
+
 .logo {
     max-height: 60px;
+    display: flex;
+    margin-left: 800%;
 }
 
 aside {
@@ -105,7 +108,7 @@ li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 92%;
+    width: 8%;
     display: flex;
 }
 
@@ -115,22 +118,34 @@ div .container {
     justify-content: space-between;
 }
 
-main {
-    margin: 0;
+
+.caixa-alinhamento {
+    width: 75%;
+    position: relative;
+    top: 0;
+    left: 25%;
+    background-color: #161618;
+    /* width: 75%;
+      display: flex;
+      background-color: #161618;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;*/
     height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: -16vh;
 }
 
-.Alinhamento-1 {
+.texto {
+    display: flex;
+    margin-left: 10%;
+    color: white;
+}
+
+.Alinhamento {
     display: flex;
     justify-content: space-between;
+    width: 800px;
     flex-direction: row;
-    margin-left: 9vh;
-
+    margin-top: 15%;
 }
 
 .menu {
@@ -159,21 +174,7 @@ main {
     justify-content: center;
 }
 
-.campo1 {
-    height: 84px;
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-
-}
-
-.campo2 {
+.campo {
     height: 84px;
     font-family: 'Chivo';
     font-style: normal;
