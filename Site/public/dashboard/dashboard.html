@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dashboards.css">
+    <link rel="Logo icon" href="./assets/disco ball.gif">   
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -61,11 +62,13 @@
             </div>
 
             <div class="btns-dash">
-                <!-- O gráfico é chamado de acordo com o id (fk_jogo) do banco  -->
-                <button class="botao">Dance Central</button>
-                <button class="botao">Just Dance</button>
-                
+                <button onclick="DC()"></button> 
             </div>
+
+            <div class="btns-dash2">
+                <button onclick="JD()"></button> 
+            </div>
+
             
             <div class="graph">
                 <canvas id="myChart"></canvas>

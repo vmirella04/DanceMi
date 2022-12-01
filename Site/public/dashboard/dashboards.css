@@ -29,12 +29,31 @@ body {
   height: 100vh;
 }
 
-.btns-dash {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 40px;
-  
+/* .btns-dash button {
+  background-image: url(../assets/DanceCentralLogo.png);
+  background-size: cover;
+} */
+
+.btns-dash button{
+  background-image: url(../assets/dancecentralccccccc.png);
+  background-repeat: no-repeat;
+  margin-left: 55%;
+  margin-top: 70px;
+  width: 20vw;
+  height: 45vh;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.btns-dash2 button{
+  background-image: url(../assets/justdanceaaaaaaaa.webp);
+  background-repeat: no-repeat;
+  margin-left: 10%;
+  margin-top: -60%;
+  width: 20vw;
+  height: 45vh;
+  background-size: cover;
+  cursor: pointer;
 }
 
 .graph {
