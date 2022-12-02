@@ -238,7 +238,7 @@ a {
 /* --FOOTER--*/
 
 .footer {
-    height: 300px;
+    height: 250px;
     background: linear-gradient(180deg, #26627c 0%, #10002b 100%);
     align-items: center;
 }
@@ -286,13 +286,11 @@ a {
 
 /* redes sociais */
 .media {
-    float: right;
+    float: left;
     margin-top: 30px;
-    margin-right: 350px;
+    margin-left: 50px;
 }
-.media h4{
 
-}
 .media img {
     align-items: center;
     margin-top: 7px;

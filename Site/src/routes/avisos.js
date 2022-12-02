@@ -31,4 +31,14 @@ router.delete("/deletar/:idAviso", function (req, res) {
     avisoController.deletar(req, res);
 });
 
+router.get("/DC", function (req, res) {
+    avisoController.DC(req, res);
+});
+
+router.get("/JD", function (req, res) {
+    avisoController.JD(req, res);
+});
+
+
+
 module.exports = router;

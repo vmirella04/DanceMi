@@ -72,6 +72,16 @@
                         </div>
                     </div>
 
+                    
+                    <div class="campo1">
+                       <select id="sel_jogo">
+                        <option value="">-Escolha Um-</option>
+                        <option value="2">Dance Central</option>
+                        <option value="1">Just Dance</option>
+                       </select>
+                    </div>
+                </div>
+
                     <!-- CHECKBOX -->
                     <div class="check-botao">
                         <div class="check">
@@ -144,8 +154,9 @@
         var emailVar = in_email.value;
         var senhaVar = in_senha.value;
         var confirmacaoSenhaVar = in_confirmacao.value;
+        var opcaoVar = sel_jogo.value
 
-        if (nomeVar == "" || celularTelefone == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || celularTelefone == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || opcaoVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -168,7 +179,8 @@
                 nomeServer: nomeVar,
                 celularTelefoneServer: celularTelefone,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                opcaoServer : opcaoVar
             })
         }).then(function (resposta) {
 

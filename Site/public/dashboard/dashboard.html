@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dashboards.css">
-    <link rel="Logo icon" href="./assets/disco ball.gif">   
+    <link rel="Logo icon" href="./assets/disco ball.gif">
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,11 +25,11 @@
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload=" atualizarFeed()">
+<body onload=" DC()">
 
     <div class="janela">
         <div class="header-left">
-           <img src="../assets/logo.png" alt="" style="width: 90%;">
+            <img src="../assets/logo.png" alt="" style="width: 90%;">
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
@@ -61,15 +61,6 @@
                 </h3>
             </div>
 
-            <div class="btns-dash">
-                <button onclick="DC()"></button> 
-            </div>
-
-            <div class="btns-dash2">
-                <button onclick="JD()"></button> 
-            </div>
-
-            
             <div class="graph">
                 <canvas id="myChart"></canvas>
             </div>
@@ -82,8 +73,75 @@
 </html>
 
 <script>
-    
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    
-     
+
+    var DC1 = sessionStorage.QTD_DC;
+    var JD1 = sessionStorage.QTD_JD
+
+    function DC() {
+        fetch(`/avisos/DC`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    console.log(resposta[0]);
+                    sessionStorage.QTD_DC = resposta[0].DC
+                    DC1 = sessionStorage.QTD_DC
+                });
+                JD()
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+
+    function JD() {
+        fetch(`/avisos/JD`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    console.log(resposta[0]);
+
+                    sessionStorage.QTD_JD = resposta[0].JD
+                    JD1 = sessionStorage.QTD_JD
+                });
+                setTimeout(() => {
+                    criarGrafico()
+                }, "400")
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function criarGrafico() {
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Dance Central', 'Just Dance'],
+                datasets: [{
+                    label: 'Quantidade de votos',
+                    data: [DC1, JD1],
+                    borderWidth: 1,
+                    backgroundColor: "red"
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
 </script>
