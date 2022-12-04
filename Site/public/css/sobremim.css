@@ -19,7 +19,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(58, 58, 58);
     /* color of the scroll thumb */
     border-radius: 20px;
     /* roundness of the scroll thumb */
@@ -30,14 +30,16 @@ body::-webkit-scrollbar-thumb {
 
 
 .background {
-    color: #000000;
+    background-image: url("../assets/wooden-background.jpg");
     width: 100%;
     height: 100vh;
     background-size: cover;
+    mix-blend-mode: normal;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .header {
-    background-color: black;
+    background-color: #64173C;
     padding: 10px 10px;
 }
 
@@ -105,27 +107,38 @@ a {
 
 /* --BANNER--*/
 
-.container {
+.banner {
 
     display: flex;
     height: 85%;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
 
 }
 
-.texto h2 {
-    display: flex;
-    align-items: center;
-}
-
 .divisao {
     width: 100%;
     height: 9px;
-    background: purple;
+    
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), rgba(87, 5, 45, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
+.slogan p {
+    padding-left: 40px;
+    color: #FFFFFF;
+    font-size: 55px;
+    font-weight: 300;
+}
+
+.slogan b {
+    color: #e3b062;
+    font-size: 55px;
+    font-weight: 700;
+    text-shadow: -3px 1px 10px black;
+}
 
 /* --CAMPO VALORES--*/
 
@@ -133,7 +146,7 @@ a {
     display: flex;
     flex-direction: column;
     padding: 15px 15px;
-    background-color: black;
+    background-color: #F2F2F2;
 }
 
 .caixaformulario {
@@ -146,7 +159,7 @@ a {
     width: 20.00vw;
     min-height: max-content;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(95, 18, 158, 0.39);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 8px 10px;
     display: flex;
     align-items: center;
@@ -164,7 +177,7 @@ a {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: purple;
+    color: #64173C;
 }
 
 .campo p {
@@ -176,15 +189,58 @@ a {
 
 }
 
+.retangulo {
+    width: 83%;
+    min-height: max-content;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 12px 50px;
+}
+
+.imagem {
+    flex-direction: column;
+    color: #000000;
+}
+
+.retangulo img {
+    width: 217px;
+    height: 217px;
+}
+
+.retangulo .imagem {
+    text-align: center;
+}
+
+.retangulo h4 {
+    width: 205px;
+    height: 41px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #64173C;
+}
+
+.retangulo p {
+    color: #000000;
+    padding-left: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+
 .social {
-    background-image: url("../assets/gif1.gif");
+    background-image: url("../assets/Imagem\ 4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
-    border-bottom: 3px solid purple;
+    border-bottom: 3px solid #64173C;
 }
 
 .social .container {
@@ -197,23 +253,59 @@ a {
     width: 30%;
 }
 
-.texto p {
-    color: #FFFFFF;
+.social img {
+    transition: all 0.8s;
+}
+
+.social img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+.texto {
     display: flex;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-    font-size: 14;
+    text-align: justify;
 }
 
 .texto h2 {
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-top: 3px;
     text-align: center;
+    width: max-content;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
     font-size: 50px;
     font-weight: 500;
+}
+
+/* --FOOTER--*/
+
+.footer {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("../assets/Imagem\ 4.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer p {
+    color: rgb(206, 206, 206);
+    padding-top: 17px;
+    font-size: 12px;
+}
+
+
+.footer .container {
+    padding: 15px 10px;
+    justify-content: space-evenly;
+    margin: auto;
+
+}
+
+.footer .container #loguinho {
+    margin-right: 100px;
 }
 
 /*--LINKS--*/
@@ -232,28 +324,25 @@ a {
 
 .links li {
     margin-top: 6px;
-    margin-right: 50px;
+    margin-right: 400px;
 }
 
 .links a {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
     font-size: 20px;
 }
 
 .links ul {
-    width: auto;
-    list-style:none;
+    width: max-content;
+    list-style: none;
 }
- .media{
-    margin-left: 50px;
- }
 
 .media img {
     margin-top:7px ;
     height: 30px;
     width: 30px;
-    margin-left: 15px;
+    margin-left: 12px;
     cursor: pointer;
 }
 

@@ -22,29 +22,6 @@ body {
   height: 100vh;
 }
 
-
-.btns-dash button{
-  background-image: url(../assets/dancecentralaaaaaaaa.jpg);
-  background-repeat: no-repeat;
-  margin-left: 55%;
-  margin-top: 90px;
-  width: 20vw;
-  height: 39.5vh;
-  background-size: contain;
-  cursor: pointer;
-}
-
-.btns-dash2 button{
-  background-image: url(../assets/justdance.webp);
-  background-repeat: no-repeat;
-  margin-left: 10%;
-  margin-top: -60%;
-  width: 20vw;
-  height: 42vh;
-  background-size: cover;
-  cursor: pointer;
-}
-
 .graph {
   width: 60%;
   margin: auto;

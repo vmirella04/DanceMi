@@ -2,51 +2,54 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/disco ball.gif" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Página Inicial</title>
+    <title>DanceMi</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="./dashboards.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboards.css">
+    <link rel="Logo icon" href="../assets/disco ball.gif">
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload="validarSessao(), listarInfosDeUm()" style="background-color: #161618;">
-    <!-- <body onload="validarSessao()"> -->
+<body onload=" DC()">
 
     <div class="janela">
-
-
         <div class="header-left">
-
-            <h1>AquaTech</h1>
+            <img src="../assets/logo.png" alt="" style="width: 90%;">
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Aquários</h3>
-                </a>
+            <div class="btn-nav">
+
+                <h3>Gráficos</h3>
+
             </div>
 
             <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
+                <a href="./avaliacao.html">
+                    <h3>Avaliação</h3>
                 </a>
             </div>
 
             <div class="btn-nav-white">
                 <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
+                    <h3>Mural</h3>
                 </a>
             </div>
 
@@ -56,74 +59,52 @@
 
         </div>
 
-        <div class="dash-right">
+        <div class="dash">
 
-            <div class="avisos">
-                <div class="container">
-                    <h1>Editar um aviso</h1>
-                    <div class="div-form">
-                        <label>
-                            ID:
-                            <br>
-                            <input id="input_id" maxlength="100" type="text" style="color: rgb(196, 196, 196)" disabled>
-                        </label>
-                        <label>
-                            Autor:
-                            <br>
-                            <input id="input_nome" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
-                                disabled>
-                        </label>
-                        <label>
-                            Título:
-                            <br>
-                            <input id="input_titulo" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
-                                disabled>
-                        </label>
-                        <br>
-                        <label>
-                            Descrição (máximo de 250 caracteres):
-                            <br>
-                            <textarea id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                        </label>
-                        <br>
-                        <button onclick="editar()">Editar</button>
-                    </div>
+            <div>
+                <h3 class="tituloGraficos">
+                    <span id="titulo">Deixe sua avaliação!</span>
+                </h3>
+            </div>
 
-                </div>
+            <div class="graph">
+                <span>Obrigada pela inscrição no nosso site, após ter aprendido um pouco sobre esse maravilhoso mundo
+                    dos jogos e da dança,
+                    que tal deixar sua avaliação sobre o nosso trabalho? <br><br>
+                </span>
+            </div>
+            <h3 class="tituloGraficos"> <span> Selecione abaixo sua nota e nos ajude a crescer!</span></h3><br>
+
+            <div class="selecao">
+                <label for="nota">
+                    <select id="sel_nota">
+                        <option id="opt_nota" value="">-Escolha Um-</option>
+                        <option id="opt_nota" value="1">1</option>
+                        <option id="opt_nota" value="2">2</option>
+                        <option id="opt_nota" value="3">3</option>
+                        <option id="opt_nota" value="4">4</option>
+                        <option id="opt_nota" value="5">5</option>
+                    </select> <br>
+                    <button onclick="avaliar()"></button>
+                    <div id="div_resultado"></div>
+                </label>
             </div>
         </div>
-    </div>
+
 </body>
 
 </html>
-
 <script>
-    function listarInfosDeUm() {
-        console.log("Criar função de trazer informações de post escolhido");
-    }
 
-    function editar() {
-        fetch(`/avisos/editar/${sessionStorage.getItem("ID_POSTAGEM_EDITANDO")}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                descricao: textarea_descricao.value
-            })
-        }).then(function (resposta) {
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-            if (resposta.ok) {
-                window.alert("Post atualizado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "/dashboard/mural.html"
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            } else {
-                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
+    function avaliar() {
+        div_resultado.innerHTML = ''
+        var avaliacao = Number(sel_nota.value)
+
+        for (var contador = 0; contador < avaliacao; contador++) {
+            div_resultado.innerHTML += `<img style="height:40px;"src="../assets/icone-estrela.png" alt="">`
+        }
     }
 
 </script>
