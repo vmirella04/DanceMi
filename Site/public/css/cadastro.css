@@ -47,8 +47,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container img {
-    width: 170px;
-    height: 70px;
+    height: 52.5px;
+    width: 206px;
 }
 
 .textos {
@@ -170,6 +170,20 @@ a {
     color: black;
 }
 
+.campo1 #sel_jogo {
+    margin-top: 10px;
+    padding: 0 20px;
+    width: 330px;
+    color: black;
+}
+
+.campo1 #opcao {
+    margin-top: 10px;
+    padding: 0 20px;
+    width: 330px;
+    color: black;
+}
+
 .campo label {
     width: 350px;
     color: rgb(58, 57, 57);
@@ -245,7 +259,7 @@ a {
 }
 
 .caixa-formulario .botao {
-    padding-left: 570px;
+    padding-left: 500px;
     margin: -50px 0px;
     display: flex;
     justify-content: flex-end;
@@ -253,7 +267,7 @@ a {
 }
 
 .check {
-    margin-top: 10px;
+    margin-top: -5%;
     display: flex;
     align-items: flex-end;
 }
@@ -263,7 +277,7 @@ a {
     gap: 15px;
 }
 
-#chk_1, #chk_2 {
+#chk_1 {
     width: 50px;
     margin-top: 15px;
     position: relative;
@@ -306,6 +320,8 @@ a {
 
 .footer .container #loguinho {
     margin-right: 100px;
+    height: 52.5px;
+    width: 206px;
 }
 
 /*--LINKS--*/

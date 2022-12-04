@@ -151,7 +151,7 @@ body {
 
 .selecao #sel_nota{
  display: flex;
- border-left: 30%;
+ justify-content: center;
 
 } 
 

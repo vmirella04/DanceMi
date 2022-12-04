@@ -1,6 +1,8 @@
+-- Criação do DataBase
 create database DanceMi;
 use DanceMi;
 
+-- Criação das tabelas
 create table Jogo (
 idJogo int primary key auto_increment,
 nome varchar(45),
