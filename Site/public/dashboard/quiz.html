@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanceMi</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboards.css">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="Logo icon" href="../assets/disco ball.gif">
+    <script src="../js/funcoes.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="janela">
+        <div class="header-left">
+            <img src="../assets/logo.png" alt="" style="width: 90%;">
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav">
+                <a href="./dashboard.html">
+                    <h3>Gráficos</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./quiz.html">
+                    <h3>Quiz</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./avaliacao.html">
+                    <h3>Avaliação</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./comentario.html">
+                    <h3>Mural</h3>
+                </a>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+        <div class="banner">
+            <div class="container">
+                <div class="caixa-quiz" id="caixa_quiz">
+                    <p>Vamos ver qual jogo combina mais com você?</p>
+                    <img src="../assets/dcvsjs.jpg" style="width: 300px;" id="img_pergunta">
+                    <button onclick="pergunta1()">Iniciar quiz</button>
+                </div>
+                <div id="div_respostas"></div>
+            </div>
+        </div>
+</body>
+
+</html>
+<script>
+    var respostasUsuario = []
+    var dancecentral = 0
+    var justdance = 0
+
+    function pergunta1() {
+        div_respostas.innerHTML = ''
+        caixa_quiz.innerHTML = `
+        <p>Qual estilo de dança você gosta?</p>
+                <img src="../assets/quizimg.jpg" style="width: 300px;" id="img_pergunta">
+                <select  id="sel_alternativa">
+                <option value="">-Escolha uma alternativa-</option>
+                <option value="breakdance">Breakdance</option>
+                <option value="fitdance">FitDance</option>
+                <option value="funk">Funk</option>
+                <option value="kpop">Kpop</option>
+            </select>
+                <button onclick="pergunta2()">Responder</button>`
+
+    }
+
+    function pergunta2() {
+        var resposta = sel_alternativa.value
+        respostasUsuario.push(resposta)
+        if (resposta == 'breakdance' || resposta == 'funk') {
+            dancecentral++
+        } else {
+            justdance++
+        }
+
+        caixa_quiz.innerHTML = `
+        <p>Qual ritmo você prefere?</p>
+                <img src="../assets/imgquiz2.webp" id="img_pergunta" style="width: 300px;">
+                <select  id="sel_alternativa">
+                    <option value="">-Escolha uma alternativa-</option>
+                    <option value="forte">Ritmo forte</option>
+                    <option value="suave">Ritmo lento</option>
+                </select>
+                <button onclick="pergunta3()">Responder</button>`
+
+    }
+
+    function pergunta3() {
+        var resposta = sel_alternativa.value
+        respostasUsuario.push(resposta)
+
+        if (resposta == 'forte') {
+            dancecentral++
+        } else {
+            justdance++
+        }
+        caixa_quiz.innerHTML = `
+        <p>Você prefere danças:</p>
+                <img src="../assets/imgquiz3.webp" id="img_pergunta" style="width: 300px;">
+                <select  id="sel_alternativa">
+                <option value="">-Escolha uma alternativa-</option>
+                <option value="facil">Fáceis e divertidas</option>
+                <option value="dificil">Dificeis e desafiadoras</option>
+            </select>
+                <button onclick="pergunta4()">Responder</button>`
+
+    }
+
+    function pergunta4() {
+        var resposta = sel_alternativa.value
+        respostasUsuario.push(resposta)
+
+        if (resposta == 'facil') {
+            justdance++
+        } else {
+            dancecentral++
+        }
+        caixa_quiz.innerHTML = `
+        <p>Você prefere jogos com:</p>
+        <img src="../assets/imgquiz4.webp" id="img_pergunta" style="width: 300px;">
+                <select  id="sel_alternativa">
+                    <option value="">-Escolha uma alternativa-</option>
+                    <option value="historia"> Uma história a seguir</option>
+                    <option value="fases"> Fases para escolher</option>
+                </select>
+                <button onclick="pergunta5()">Responder</button>`
+
+    }
+
+    function pergunta5() {
+        var resposta = sel_alternativa.value
+        respostasUsuario.push(resposta)
+
+        if (resposta == 'historia') {
+            dancecentral++
+        } else {
+            justdance++
+        }
+        caixa_quiz.innerHTML = `
+        <p>Você gosta de jogos de décadas?</p>
+                <img src="../assets/imgquiz5.jpg" id="img_pergunta" style="width: 300px;">
+                <select  id="sel_alternativa">
+                <option value="">-Escolha uma alternativa-</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            <div id="div_respostas"></div>
+                <button onclick="fimQuiz()">Responder</button>`
+
+    }
+
+    function fimQuiz() {
+        var resposta = sel_alternativa.value
+        respostasUsuario.push(resposta)
+
+        if (resposta == 'sim') {
+            dancecentral++
+        } else {
+            justdance++
+        }
+
+        if (dancecentral < justdance) {
+            caixa_quiz.innerHTML = `
+        <p>Você combina mais com o Just Dance</p>
+        <img src="../assets/jsgif.gif" id="img_pergunta" style="width: 300px;">
+       
+        <button onclick="pergunta1()">Tentar de novo</button>`
+        } else {
+            caixa_quiz.innerHTML = `
+            <p>Você combina mais com o Dance Central</p>
+            <img src="../assets/dcgif.gif" id="img_pergunta" style="width: 300px;">
+            <button onclick="pergunta1()">Tentar de novo</button>`
+        }
+
+
+        for (let i = 0; i < respostasUsuario.length; i++) {
+            var atual = respostasUsuario[i];
+
+            div_respostas.innerHTML += `Pergunta ${i + 1}-Sua Resposta: ${atual}<br>`
+
+        }
+        respostasUsuario = []
+        justdance = 0
+
+    }
+
+</script>

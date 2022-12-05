@@ -149,7 +149,13 @@ body {
   justify-content: center;
 }
 
-.selecao #sel_nota{
+.dash .selecao {
+  background-color:aqua;
+  padding: 5%;
+  display: flex;
+}
+
+.dash .selecao sel_nota{
  display: flex;
  justify-content: center;
 

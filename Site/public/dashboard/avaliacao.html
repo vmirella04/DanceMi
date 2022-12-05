@@ -36,9 +36,15 @@
             </div>
 
             <div class="btn-nav">
-
+                <a href="./dashboard.html">
                 <h3>Gráficos</h3>
+                </a>
+            </div>
 
+            <div class="btn-nav-white">
+                <a href="./quiz.html">
+                    <h3>Quiz</h3>
+                </a>
             </div>
 
             <div class="btn-nav-white">
@@ -48,7 +54,7 @@
             </div>
 
             <div class="btn-nav-white">
-                <a href="./mural.html">
+                <a href="./comentario.html">
                     <h3>Mural</h3>
                 </a>
             </div>
@@ -56,6 +62,7 @@
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
+
 
         </div>
 
@@ -76,7 +83,7 @@
             <h3 class="tituloGraficos"> <span> Selecione abaixo sua nota e nos ajude a crescer!</span></h3><br>
 
             <div class="selecao">
-                <label for="nota">
+                <!-- <label for="nota"> -->
                     <select id="sel_nota">
                         <option id="opt_nota" value="">-Escolha Um-</option>
                         <option id="opt_nota" value="1">1</option>
@@ -88,10 +95,10 @@
                     <button onclick="avaliar()">Avaliar!</button>
                 
                     <div id="div_resultado"></div>
-                </label>
+                <!-- </label> -->
             </div>
         </div>
-
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,67 @@
+
+
+.banner {
+    background-color: #240046;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+
+}
+
+.banner .container{
+    justify-content: center;
+    align-items: center;
+    padding-left: 400px;
+}
+.caixa-quiz{
+    width: 70%;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 5px;
+    
+}
+.caixa-quiz p{
+    color: black;
+    background-color: #6f2dbd;
+    font-size: larger;
+    width: 500px;
+    text-align: center;
+}
+.caixa-quiz input{
+    color: black;
+    width: 300px;
+    height: 4vh;
+}
+
+.caixa-quiz select, option{
+    color: black;
+    width: 300px;
+}
+
+.caixa-quiz button{
+    width: 300px;
+    margin: 15px;
+    color: black;
+    background-color: #6f2dbd;
+    height: 4vh;
+    font-size: large;
+}
+
+#imgdoquiz{
+    width: 250px;
+    
+}
+
+.respostas{
+     height: 70vh;
+    font-family: fantasy;
+    background-color: red;
+    border: 5px solid black ;
+}
