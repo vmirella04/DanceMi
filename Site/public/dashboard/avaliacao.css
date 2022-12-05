@@ -150,7 +150,7 @@ body {
 }
 
 .dash .selecao {
-  background-color:aqua;
+  background-color:black;
   padding: 5%;
   display: flex;
 }
@@ -228,7 +228,6 @@ body {
   height: fit-content;
   padding: 40px 0;
   color: white;
-  background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
   background-size: cover;
 }
 
