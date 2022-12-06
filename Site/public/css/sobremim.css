@@ -137,20 +137,24 @@ a {
 }
 
 
-.container {
+.container { 
     margin: 0 auto;
-    width: 92%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+
 /* --BANNER--*/
 
 .banner{
+    background-image: url(../assets/banner-index.png);
+    background-color: #7b2cbf;
     display: flex;
+    height: 100vh;
     padding: 16% 15%;
-    background-color: #FFFFFF;
+    
 
 }
 
